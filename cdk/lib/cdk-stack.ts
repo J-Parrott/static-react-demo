@@ -28,6 +28,7 @@ export class CdkStack extends cdk.Stack {
       "jfp-static-react-app-distribution",
       {
         defaultBehavior: { origin: new origins.S3Origin(bucket) },
+        webAclId: `arn:aws:wafv2:us-east-1:${process.env.AWS_ACCOUNT}:global/webacl/${process.env.WEB_ACL_ID}`,
       }
     );
 
