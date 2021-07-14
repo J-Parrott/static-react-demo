@@ -13,3 +13,5 @@ jobs:
         uses: actions/checkout@v2
       - name: Clean install dependencies
         run: npm ci
+      - name: Build react app
+        run: npm run build
